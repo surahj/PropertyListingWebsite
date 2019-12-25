@@ -1,0 +1,16 @@
+/* .hero {
+    background-image: url('../static/images/hero.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+  }
+  .parag {
+    color:red;
+    font-size: large;
+  }
+  
+  @media screen and (min-width: 992px) {
+    .miniHero {
+      background-position-y: -150px;
+    }
+  } */
