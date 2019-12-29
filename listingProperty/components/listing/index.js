@@ -19,13 +19,15 @@ function Listing({ listing }) {
   }
 
   const { id, images, title, address, description, price } = listing
-  const columnClasses = classnames('column', 'col-4', 'col-xs-12', styles.column)
+  const columnClasses = classnames('column', 'col-3', 'col-xs-12', styles.column)
   const cardClasses = classnames('card', styles.card)
   const image = images.find(index=> { return (index)})
   
   return (
     <div className={columnClasses}>
       <div className={cardClasses}>
+      <Link href={`details/${id}`}>
+        <a>
         <div className="card-image">
           <img className="img-responsive" src={`/server/${image}`} alt={address} />
         </div>
@@ -37,14 +39,23 @@ function Listing({ listing }) {
           </div>
           <div className="card-subtitle text-gray">{address}</div>
         </div>
-        <div className="card-body">{description}</div>
-        <div className="card-footer">
-          <Link href={`details/${id}`}>
-           <a className= "btn btn-primary"> Go to property</a>
-          </Link>
-        </div>
+        </a>
+        </Link>
+        {/* <div className="card-body">{description}</div> */}
+        
       </div>
+      <style jsx>
+      {`
+      a{
+        color:black;
+      }
+      a:hover{
+        text-decoration:none;
+      }
+      `}
+    </style>
     </div>
+    
   )
 }
 

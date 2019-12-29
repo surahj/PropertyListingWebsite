@@ -4,16 +4,29 @@ import Logo from './logo.png'
 
 const Nav = () => (
  <nav>
-  <header className="navbar">
+   {function myFunction() {
+  let x = document.getElementById("myTopnav");
+  if (x.className === "navbar") {
+    x.className += " responsive";
+  } else {
+    x.className = "navbar";
+  }
+}}
+
+  <header className="navbar" id ="myTopnav">
   <section className="navbar-section logo">
     <a href="/" className="navbar-brand mr-2"><img src={Logo} alt= 'website logo' 
     style = {{width:'160px', height:'50px', paddingTop:'5px'}} /> </a>
   </section>
   <section className="navbar-center">
+  <a href="/" className="btn btn-link" className="active">Home</a>
     <a href="#" className="btn btn-link">Buy</a>
     <a href="#" className="btn btn-link">Rent</a>
     <a href="#" className="btn btn-link">Find Agent</a>
     <a href="/about" className="btn btn-link">About</a>
+    <a href="javascript:void(0);" className="icon" onClick="myFunction()">
+    <i ></i>
+  </a>
   </section>
   <section  className="navbar-section">
   <button className="btn btn-link">LOGIN</button>
@@ -25,26 +38,71 @@ const Nav = () => (
 </header>
 <style jsx>
   {`
-    a {
-      text-align: center;
-      
-      font-size:25px;
-      padding-left:30px;
-      padding-bottom:0px;
-    }
     
-    .navbar-brand mr-2 {
     
-    }
     button {
       font-size:20px
     }
     .navbar{
-      border:1px solid blue;
+      border:1pxpx solid gray;
       padding:0px 1px;
     }
-    a.active{
+    
+    a:hover{
+      border-top:1px solid red;
       border-bottom:1px solid red;
+      color:red;
+    }
+
+    .navbar {
+      overflow: hidden;
+      
+    }
+    
+    .navbar a {
+      float: left;
+      display: block;
+      
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    
+    .navbar a:hover {
+      border-top:1px solid red;
+      border-bottom:1px solid red;
+      text-color:red;
+    }
+    
+     .navbar a.active {
+      border-bottom:1px solid red;
+     }
+    
+    .navbar .icon {
+      display: none;
+    }
+    
+    @media screen and (max-width: 600px) {
+      .navbar a:not(:first-child) {display: none;}
+      .navbar a.icon {
+        float: right;
+        display: block;
+      }
+    }
+    
+    @media screen and (max-width: 600px) {
+      .navbar.responsive {position: relative;}
+      .navbar.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .navbar.responsive a {
+        float: left;
+        display: block;
+        text-align: center;
+      }
     }
   `}
   </style>

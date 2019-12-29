@@ -16,6 +16,7 @@ function PropertyDetails({ listing }) {
   console.log('This is propeertyDetails')
   const { title, address, description, price, features, details, images } = listing
   const priceClasses = classnames('text-success', 'text-right')
+  const indexes = images.map((img,index)=>{return (index)})
 
   return (
     <div>
@@ -37,7 +38,7 @@ function PropertyDetails({ listing }) {
       </div>
       <div className="columns">
         <div className="column col-6 col-xs-12">
-         <KeyImage images={images}/>
+         <KeyImage images={images} key={images.map((img,index)=>{return index})} />
         </div>
 
         <div className="column col-6 col-xs-12">
