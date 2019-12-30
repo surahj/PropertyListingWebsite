@@ -25,7 +25,7 @@ const Nav = () => (
     <a href="#" className="btn btn-link">Find Agent</a>
     <a href="/about" className="btn btn-link">About</a>
     <a href="javascript:void(0);" className="icon" onClick="myFunction()">
-    <i ></i>
+    <i >===</i>
   </a>
   </section>
   <section  className="navbar-section">
@@ -48,7 +48,7 @@ const Nav = () => (
       padding:0px 1px;
     }
     
-    a:hover{
+    .navbar-center a:hover{
       border-top:1px solid red;
       border-bottom:1px solid red;
       color:red;
@@ -64,7 +64,7 @@ const Nav = () => (
       display: block;
       
       text-align: center;
-      padding: 14px 16px;
+      
       text-decoration: none;
       font-size: 17px;
     }
@@ -75,7 +75,7 @@ const Nav = () => (
       text-color:red;
     }
     
-     .navbar a.active {
+     .navbar a:active {
       border-bottom:1px solid red;
      }
     
