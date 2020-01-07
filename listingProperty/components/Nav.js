@@ -19,19 +19,20 @@ const Nav = () => (
     style = {{width:'160px', height:'50px', paddingTop:'5px'}} /> </a>
   </section>
   <section className="navbar-center">
-  <a href="/" className="btn btn-link" className="active">Home</a>
-    <a href="#" className="btn btn-link">Buy</a>
+  <a href="/about" className="btn btn-link">About</a>
+  
+    {/* <a href="#" className="btn btn-link">Buy</a>
     <a href="#" className="btn btn-link">Rent</a>
     <a href="#" className="btn btn-link">Find Agent</a>
-    <a href="/about" className="btn btn-link">About</a>
-    <a href="javascript:void(0);" className="icon" onClick="myFunction()">
-    <i >===</i>
+    <a href="/" className="btn btn-link" >Home</a> */}
+    <a href="dangerouslySetInnerHTML;" className="icon" onClick="myFunction()">
+    <i ></i>
   </a>
   </section>
-  <section  className="navbar-section">
+  {/* <section  className="navbar-section">
   <button className="btn btn-link">LOGIN</button>
   <button className="btn btn-link">SIGN UP</button>
-  </section>
+  </section> */}
   
   
 
